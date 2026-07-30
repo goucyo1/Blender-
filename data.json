@@ -1,1 +1,360 @@
-[]
+[
+  {
+    "cat": "モデリング",
+    "title": "穴を開けたい・くり抜きたい",
+    "feature": "ブーリアンモディファイアー（差分） (Boolean Modifier - Difference)",
+    "location": "モディファイアープロパティ ▸ 追加 ▸ 生成 ▸ ブーリアン (Boolean)",
+    "tip": "削る側のメッシュを Operand Object に指定する。"
+  },
+  {
+    "cat": "モデリング",
+    "title": "角を丸めたい・面取りしたい",
+    "feature": "ベベル (Bevel)",
+    "location": "編集モード ▸ 辺/頂点を選択 ▸ 辺 ▸ ベベル (Bevel)",
+    "shortcut": "Ctrl+B",
+    "tip": "マウスホイールでセグメント数を増減できる。"
+  },
+  {
+    "cat": "モデリング",
+    "title": "面を増やして編集しやすくしたい",
+    "feature": "ループカット (Loop Cut and Slide)",
+    "location": "編集モード ▸ ループカット (Loop Cut)",
+    "shortcut": "Ctrl+R",
+    "tip": "クリックで位置決め、ホイールで分割数を変更。"
+  },
+  {
+    "cat": "モデリング",
+    "title": "左右対称に作りたい",
+    "feature": "ミラーモディファイアー (Mirror Modifier)",
+    "location": "モディファイアープロパティ ▸ 生成 ▸ ミラー (Mirror)",
+    "tip": "中心の頂点を統合したい場合は「クリッピング」を有効化。"
+  },
+  {
+    "cat": "モデリング",
+    "title": "面を押し出して形を作りたい",
+    "feature": "押し出し (Extrude Region)",
+    "location": "編集モード ▸ メッシュ ▸ 押し出し (Extrude)",
+    "shortcut": "E",
+    "tip": "軸を固定したい時はEの後にX/Y/Zを押す。"
+  },
+  {
+    "cat": "モデリング",
+    "title": "面の内側にひと回り小さい面を作りたい",
+    "feature": "インセット (Inset Faces)",
+    "location": "編集モード ▸ 面 ▸ インセット (Inset Faces)",
+    "shortcut": "I",
+    "tip": "Iを2回押すと面ごとに個別インセットできる。"
+  },
+  {
+    "cat": "モデリング",
+    "title": "バラバラの頂点を1点にまとめたい",
+    "feature": "結合 (Merge Vertices)",
+    "location": "編集モード ▸ 頂点 ▸ マージ (Merge) ▸ 中心に (At Center)",
+    "shortcut": "M",
+    "tip": "「距離で」を使うと近接頂点をまとめて溶接できる。"
+  },
+  {
+    "cat": "モデリング",
+    "title": "離れた2つの辺ループを面でつなぎたい",
+    "feature": "辺ループのブリッジ (Bridge Edge Loops)",
+    "location": "編集モード ▸ 辺 ▸ 辺ループのブリッジ (Bridge Edge Loops)",
+    "tip": "両ループの頂点数が同じでないと形が歪みやすい。"
+  },
+  {
+    "cat": "モデリング",
+    "title": "メッシュの一部を別オブジェクトに切り離したい",
+    "feature": "分離 - 選択 (Separate - Selection)",
+    "location": "編集モード ▸ メッシュ ▸ 分離 (Separate) ▸ 選択 (Selection)",
+    "shortcut": "P",
+    "tip": "新しいオブジェクトはアウトライナーの一番下に追加される。"
+  },
+  {
+    "cat": "モデリング",
+    "title": "自由な形にメッシュを切りたい",
+    "feature": "ナイフ (Knife)",
+    "location": "編集モード ▸ ナイフ (Knife)",
+    "shortcut": "K",
+    "tip": "Cで角度スナップの切替、Enterで確定。"
+  },
+  {
+    "cat": "モデリング",
+    "title": "シェーディングが黒くまだらになる",
+    "feature": "法線の再計算 (Recalculate Normals)",
+    "location": "編集モード ▸ すべて選択 ▸ メッシュ ▸ 法線 ▸ 外側に揃える (Recalculate Outside)",
+    "shortcut": "Shift+N",
+    "tip": "反転している面だけ直したい時は「反転」を使う。"
+  },
+  {
+    "cat": "モデリング",
+    "title": "モディファイアの形を実データに反映したい",
+    "feature": "適用 (Apply)",
+    "location": "モディファイアープロパティ ▸ 各モディファイアの ▾ ▸ 適用 (Apply)",
+    "tip": "適用後は編集モードに戻せないので複製推奨。"
+  },
+  {
+    "cat": "スカルプト",
+    "title": "彫っている最中に面をどんどん増やしたい",
+    "feature": "動的トポロジー (Dyntopo)",
+    "location": "スカルプトモード ▸ ヘッダー ▸ 動的トポロジー (Dyntopo)",
+    "tip": "細部を彫る前にディテールサイズを小さくしておく。"
+  },
+  {
+    "cat": "スカルプト",
+    "title": "荒れたメッシュを均一な密度に整えたい",
+    "feature": "リメッシュ (Remesh)",
+    "location": "スカルプトモード ▸ リメッシュ ▸ ボクセルサイズ (Voxel Size) ▸ リメッシュ (Remesh)",
+    "shortcut": "Ctrl+R",
+    "tip": "ボクセルサイズを小さくするほど高精細だが重くなる。"
+  },
+  {
+    "cat": "スカルプト",
+    "title": "左右対称に彫りたい",
+    "feature": "対称 X (Symmetry X)",
+    "location": "スカルプトモード ▸ ヘッダー ▸ 対称 (Symmetry) ▸ X",
+    "tip": "中心線がズレる場合はオブジェクトの原点を確認。"
+  },
+  {
+    "cat": "スカルプト",
+    "title": "彫った形を保ったまま滑らかさを上げたい",
+    "feature": "マルチレゾリューションモディファイアー (Multiresolution)",
+    "location": "モディファイアープロパティ ▸ 生成 ▸ マルチレゾリューション (Multiresolution) ▸ 細分化 (Subdivide)",
+    "tip": "スカルプトを始める前に追加しておく必要がある。"
+  },
+  {
+    "cat": "UV・マテリアル",
+    "title": "オブジェクトに色や質感をつけたい",
+    "feature": "マテリアル (Material)",
+    "location": "マテリアルプロパティ ▸ 新規 (New)",
+    "tip": "複数オブジェクトへは Ctrl+L ▸ マテリアル でリンクできる。"
+  },
+  {
+    "cat": "UV・マテリアル",
+    "title": "画像を貼り付けたい",
+    "feature": "画像テクスチャ (Image Texture)",
+    "location": "シェーダーエディター ▸ 追加 ▸ テクスチャ (Texture) ▸ 画像テクスチャ (Image Texture)",
+    "shortcut": "Shift+A",
+    "tip": "カラーはベースカラーへ、法線マップはNon-Colorに設定。"
+  },
+  {
+    "cat": "UV・マテリアル",
+    "title": "3Dモデルを平らに展開したい",
+    "feature": "UV展開 (Unwrap)",
+    "location": "編集モード ▸ UV ▸ 展開 (Unwrap)",
+    "shortcut": "U",
+    "tip": "先に「シームとしてマーク」で縫い目を指定しておく。"
+  },
+  {
+    "cat": "UV・マテリアル",
+    "title": "表面の光沢やザラつきを変えたい",
+    "feature": "粗さ / メタリック (Roughness / Metallic)",
+    "location": "マテリアルプロパティ ▸ プリンシプルBSDF (Principled BSDF)",
+    "tip": "粗さ0で鏡面、1でマットな質感になる。"
+  },
+  {
+    "cat": "UV・マテリアル",
+    "title": "UVの継ぎ目を目立たなくしたい",
+    "feature": "シームの配置 (Mark Seam)",
+    "location": "編集モード ▸ 辺を選択 ▸ UV ▸ シームとしてマーク (Mark Seam)",
+    "tip": "目立たない角や裏側に沿ってシームを通すのがコツ。"
+  },
+  {
+    "cat": "レンダリング",
+    "title": "レンダリングの絵づくりを変えたい",
+    "feature": "レンダーエンジン切替 (Render Engine: EEVEE / Cycles)",
+    "location": "レンダープロパティ ▸ レンダーエンジン (Render Engine)",
+    "tip": "最終仕上げはCycles、確認用はEEVEEが速い。"
+  },
+  {
+    "cat": "レンダリング",
+    "title": "今の画をレンダリングして保存したい",
+    "feature": "静止画レンダリング (Render Image)",
+    "location": "レンダー ▸ 画像をレンダリング (Render Image)",
+    "shortcut": "F12",
+    "tip": "結果ウィンドウで「画像」▸「保存」を忘れずに。"
+  },
+  {
+    "cat": "レンダリング",
+    "title": "ザラザラしたノイズを減らしたい",
+    "feature": "デノイズ (Denoise)",
+    "location": "レンダープロパティ ▸ サンプリング (Sampling) ▸ デノイズ (Denoise)",
+    "tip": "サンプル数を上げるより先にまず試す価値がある。"
+  },
+  {
+    "cat": "レンダリング",
+    "title": "背景をぼかして被写体を目立たせたい",
+    "feature": "被写界深度 (Depth of Field)",
+    "location": "カメラのオブジェクトデータプロパティ ▸ 被写界深度 (Depth of Field)",
+    "tip": "フォーカスオブジェクトを指定すると距離調整が楽になる。"
+  },
+  {
+    "cat": "レンダリング",
+    "title": "アニメーションを動画として書き出したい",
+    "feature": "アニメーションレンダリング (Render Animation)",
+    "location": "出力プロパティ ▸ ファイル形式(FFmpeg動画) ▸ レンダー ▸ アニメーションをレンダリング (Render Animation)",
+    "shortcut": "Ctrl+F12",
+    "tip": "出力プロパティで保存フォルダと形式を先に設定。"
+  },
+  {
+    "cat": "アニメーション・物理演算",
+    "title": "動きを記録したい",
+    "feature": "キーフレーム挿入 (Insert Keyframe)",
+    "location": "タイムライン ▸ 値を変更 ▸ キーフレームを挿入 (Insert Keyframe)",
+    "shortcut": "I",
+    "tip": "位置・回転・拡縮をまとめて打つなら「全トランスフォーム」。"
+  },
+  {
+    "cat": "アニメーション・物理演算",
+    "title": "複数オブジェクトを一緒に動かしたい",
+    "feature": "親子関係 (Parenting)",
+    "location": "子を選択 ▸ 親を最後に選択 ▸ オブジェクト ▸ 親を設定 (Set Parent)",
+    "shortcut": "Ctrl+P",
+    "tip": "親のトランスフォームを保持したい時はCtrl+Pの選択肢を確認。"
+  },
+  {
+    "cat": "アニメーション・物理演算",
+    "title": "手足を直感的に動かしたい",
+    "feature": "逆運動学 IK (Inverse Kinematics)",
+    "location": "ポーズモード ▸ ボーンコンストレイントプロパティ ▸ 追加 ▸ IK",
+    "tip": "ターゲットボーンとチェーンの長さの設定を忘れずに。"
+  },
+  {
+    "cat": "アニメーション・物理演算",
+    "title": "動きの緩急を自然にしたい",
+    "feature": "補間モード変更 (Interpolation)",
+    "location": "グラフエディター ▸ キーフレームを選択 ▸ 補間モード (Interpolation)",
+    "shortcut": "T",
+    "tip": "「イージング」で加速・減速の質感を細かく調整できる。"
+  },
+  {
+    "cat": "アニメーション・物理演算",
+    "title": "布や旗を風で揺らしたい",
+    "feature": "クロス物理演算 (Cloth Physics)",
+    "location": "物理演算プロパティ ▸ クロス (Cloth)",
+    "tip": "衝突相手にもコリジョンを追加しないとすり抜ける。"
+  },
+  {
+    "cat": "アニメーション・物理演算",
+    "title": "物同士をぶつけて自然に転がしたい",
+    "feature": "剛体 (Rigid Body)",
+    "location": "物理演算プロパティ ▸ 剛体 (Rigid Body)",
+    "tip": "床側は「受動」、動く側は「能動」に設定。"
+  },
+  {
+    "cat": "ファイル管理",
+    "title": "別のファイルの3Dモデルを持ってきたい",
+    "feature": "アペンド / リンク (Append / Link)",
+    "location": "ファイル ▸ アペンド (Append) / リンク (Link)",
+    "tip": "リンクは元ファイルの更新が反映されるが編集はできない。"
+  },
+  {
+    "cat": "ファイル管理",
+    "title": "画像などの外部ファイルを1つにまとめたい",
+    "feature": "外部データをパック (Pack All Into .blend)",
+    "location": "ファイル ▸ 外部データ (External Data) ▸ すべてをパック (Pack All Into .blend)",
+    "tip": "配布前にこれをしておくと画像が行方不明にならない。"
+  },
+  {
+    "cat": "ファイル管理",
+    "title": "上書きせずバージョン違いで保存したい",
+    "feature": "バージョンを上げて保存 (Save Incremental)",
+    "location": "ファイル ▸ バージョンを上げて保存 (Save Incremental)",
+    "shortcut": "Ctrl+Alt+S",
+    "tip": "ファイル名末尾の連番が自動で+1される。"
+  },
+  {
+    "cat": "ファイル管理",
+    "title": "作った素材を他のプロジェクトでも使い回したい",
+    "feature": "アセットブラウザー (Asset Browser)",
+    "location": "アセットブラウザーエディター ▸ ライブラリからドラッグ&ドロップ",
+    "versions": [
+      "3.x",
+      "4.x"
+    ],
+    "tip": "オブジェクトを右クリック ▸「アセットとしてマーク」で登録できる。"
+  },
+  {
+    "cat": "ジオメトリノード",
+    "title": "面の上にランダムにオブジェクトを増やしたい",
+    "feature": "面に点を配置 → インスタンスを点に配置 (Distribute Points on Faces → Instance on Points)",
+    "location": "ジオメトリノードエディター ▸ 追加 ▸ ポイント ▸ 面に点を配置 (Distribute Points on Faces)",
+    "versions": [
+      "3.x",
+      "4.x"
+    ],
+    "tip": "密度の値を上げすぎると重くなるので注意。"
+  },
+  {
+    "cat": "ジオメトリノード",
+    "title": "ノード内の設定を外側から調整したい",
+    "feature": "グループ入力 / グループ出力 (Group Input / Group Output)",
+    "location": "ジオメトリノードエディター ▸ 追加 ▸ グループ入力 (Group Input) ・ グループ出力 (Group Output)",
+    "versions": [
+      "3.x",
+      "4.x"
+    ],
+    "tip": "モディファイアープロパティ側に入力値のスライダーが自動で出てくる。"
+  },
+  {
+    "cat": "ジオメトリノード",
+    "title": "作ったノードの組み合わせを他でも使いたい",
+    "feature": "ノードグループ化 (Make Group)",
+    "location": "ジオメトリノードエディター ▸ ノードを選択 ▸ Ctrl+G",
+    "shortcut": "Ctrl+G",
+    "versions": [
+      "3.x",
+      "4.x"
+    ],
+    "tip": "グループをアセットとしてマークすると他ファイルでも再利用できる。"
+  },
+  {
+    "cat": "ジオメトリノード",
+    "title": "条件によって形を切り替えたい",
+    "feature": "スイッチ (Switch)",
+    "location": "ジオメトリノードエディター ▸ 追加 ▸ ユーティリティ (Utilities) ▸ スイッチ (Switch)",
+    "versions": [
+      "3.x",
+      "4.x"
+    ],
+    "tip": "真偽値をGroup Inputに出すとモディファイア側でON/OFFできる。"
+  },
+  {
+    "cat": "操作・UI",
+    "title": "全部選びたい／選択を外したい",
+    "feature": "すべて選択 / 選択解除 (Select All / Deselect All)",
+    "location": "3Dビューポート ▸ 選択 (Select) ▸ すべて (All) / なし (None)",
+    "shortcut": "A / Alt+A",
+    "tip": "マウスカーソルが3Dビューポート上にないと反応しない。"
+  },
+  {
+    "cat": "操作・UI",
+    "title": "骨組みだけ見たい",
+    "feature": "ワイヤーフレーム表示 (Wireframe)",
+    "location": "3Dビューポート ▸ シェーディング (Shading) ▸ ワイヤーフレーム (Wireframe)",
+    "shortcut": "Shift+Z",
+    "tip": "重なった裏側の頂点も選べるようになる。"
+  },
+  {
+    "cat": "操作・UI",
+    "title": "裏側まで透けて見えるようにしたい",
+    "feature": "X線表示切替 (Toggle X-Ray)",
+    "location": "3Dビューポート ▸ X線表示切り替え (Toggle X-Ray)",
+    "shortcut": "Alt+Z",
+    "tip": "ボックス選択で奥の頂点もまとめて選べるようになる。"
+  },
+  {
+    "cat": "操作・UI",
+    "title": "正面・上面・横から見たい",
+    "feature": "正投影ビュー (Front / Top / Right Orthographic)",
+    "location": "3Dビューポート ▸ ビュー (View) ▸ 視点 (Viewpoint)",
+    "shortcut": "テンキー 1 / 7 / 3",
+    "tip": "Ctrl+テンキーで反対側からの視点になる。"
+  },
+  {
+    "cat": "操作・UI",
+    "title": "今見ている角度でカメラを固定したい",
+    "feature": "視点からカメラを設定 (Align Camera to View)",
+    "location": "3Dビューポート ▸ 表示 ▸ 視点を揃える (Align View) ▸ 視点からカメラを設定",
+    "shortcut": "Ctrl+Alt+Numpad0",
+    "tip": "カメラが無い場合は先にShift+A ▸ カメラを追加。"
+  }
+]
