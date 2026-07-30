@@ -1073,14 +1073,14 @@
     "tip": "この視点のままN移動すると実際にカメラが動くので注意。"
   },
   {
-    "cat": "操作・UI",
+    "cat": "アドオン",
     "title": "追加機能(アドオン)を使えるようにしたい",
     "feature": "アドオンを有効化 (Enable Add-on)",
     "location": "編集 (Edit) ▸ プリファレンス (Preferences) ▸ アドオン (Add-ons) ▸ チェックボックスを有効化",
     "tip": "有効化してもすぐ反映されない場合はBlenderの再起動を試す。"
   },
   {
-    "cat": "操作・UI",
+    "cat": "アドオン",
     "title": "ダウンロードしたアドオンファイルを追加したい",
     "feature": "ディスクからインストール (Install from Disk)",
     "location": "プリファレンス (Preferences) ▸ アドオン (Add-ons) ▸ 右上の▾ ▸ ディスクからインストール (Install from Disk)",
@@ -1116,7 +1116,7 @@
     "tip": "前のフレームは赤系、後のフレームは緑系の色で薄く重ねて表示される。"
   },
   {
-    "cat": "操作・UI",
+    "cat": "アドオン",
     "title": "ネットから直接アドオンを探して入れたい",
     "feature": "拡張機能を入手 (Get Extensions)",
     "location": "編集 (Edit) ▸ プリファレンス (Preferences) ▸ アドオン (Add-ons) ▸ 拡張機能を入手 (Get Extensions)",
@@ -1127,14 +1127,14 @@
     "tip": "Blender 4.2以降の機能。プリファレンスでオンラインアクセスを許可しておく必要がある。"
   },
   {
-    "cat": "操作・UI",
+    "cat": "アドオン",
     "title": "アドオンの細かい設定を開きたい",
     "feature": "アドオンの環境設定 (Add-on Preferences)",
     "location": "プリファレンス (Preferences) ▸ アドオン (Add-ons) ▸ 該当アドオン名の▸を展開",
     "tip": "キー割り当てや保存パスなど、アドオン固有の設定はここに入っていることが多い。"
   },
   {
-    "cat": "操作・UI",
+    "cat": "アドオン",
     "title": "アドオンを無効化した後、動きがおかしいままになる",
     "feature": "アドオンキャッシュのリセット (Reset Add-on Cache)",
     "location": "プリファレンス (Preferences) ▸ アドオン (Add-ons) ▸ 右上の▾ ▸ Reset Add-on Cache",
@@ -1145,35 +1145,35 @@
     "tip": "有効/無効を切り替えても直らない不具合はまずこれを試す。"
   },
   {
-    "cat": "操作・UI",
+    "cat": "アドオン",
     "title": "使わなくなったアドオンを消したい",
     "feature": "アドオンの削除 (Remove)",
     "location": "プリファレンス (Preferences) ▸ アドオン (Add-ons) ▸ 該当アドオンを展開 ▸ 削除 (Remove)",
     "tip": "同梱アドオン(標準搭載)は削除ではなく無効化のみになっていることが多い。"
   },
   {
-    "cat": "操作・UI",
+    "cat": "アドオン",
     "title": "ノードエディターでの作業を効率化したい",
     "feature": "Node Wrangler（標準同梱アドオン）",
     "location": "プリファレンス ▸ アドオン ▸ \"Node Wrangler\" を検索して有効化",
     "tip": "Ctrl+Tでテクスチャセットアップの一括生成など、ノード作業が大幅に楽になる。"
   },
   {
-    "cat": "操作・UI",
+    "cat": "アドオン",
     "title": "UV展開やモデリングの補助ツールを増やしたい",
     "feature": "LoopTools（標準同梱アドオン）",
     "location": "プリファレンス ▸ アドオン ▸ \"LoopTools\" を検索して有効化",
     "tip": "有効化すると編集モードの「辺」メニュー内にLoopToolsのサブメニューが追加される。"
   },
   {
-    "cat": "操作・UI",
+    "cat": "アドオン",
     "title": "ブーリアン編集をブラシ感覚で直感的に行いたい",
     "feature": "Bool Tool（標準同梱アドオン）",
     "location": "プリファレンス ▸ アドオン ▸ \"Bool Tool\" を検索して有効化",
     "tip": "有効化後は3Dビューポートの追加メニュー等からブーリアン操作をワンクリックで実行できる。"
   },
   {
-    "cat": "操作・UI",
+    "cat": "アドオン",
     "title": "人型のリグを効率よく組みたい",
     "feature": "Rigify（標準同梱アドオン）",
     "location": "プリファレンス ▸ アドオン ▸ \"Rigify\" を検索して有効化",
