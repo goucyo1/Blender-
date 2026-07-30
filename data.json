@@ -268,7 +268,8 @@
     "location": "アセットブラウザーエディター ▸ ライブラリからドラッグ&ドロップ",
     "versions": [
       "3.x",
-      "4.x"
+      "4.x",
+      "5.x"
     ],
     "tip": "オブジェクトを右クリック ▸「アセットとしてマーク」で登録できる。"
   },
@@ -279,7 +280,8 @@
     "location": "ジオメトリノードエディター ▸ 追加 ▸ ポイント ▸ 面に点を配置 (Distribute Points on Faces)",
     "versions": [
       "3.x",
-      "4.x"
+      "4.x",
+      "5.x"
     ],
     "tip": "密度の値を上げすぎると重くなるので注意。"
   },
@@ -290,7 +292,8 @@
     "location": "ジオメトリノードエディター ▸ 追加 ▸ グループ入力 (Group Input) ・ グループ出力 (Group Output)",
     "versions": [
       "3.x",
-      "4.x"
+      "4.x",
+      "5.x"
     ],
     "tip": "モディファイアープロパティ側に入力値のスライダーが自動で出てくる。"
   },
@@ -302,7 +305,8 @@
     "shortcut": "Ctrl+G",
     "versions": [
       "3.x",
-      "4.x"
+      "4.x",
+      "5.x"
     ],
     "tip": "グループをアセットとしてマークすると他ファイルでも再利用できる。"
   },
@@ -313,7 +317,8 @@
     "location": "ジオメトリノードエディター ▸ 追加 ▸ ユーティリティ (Utilities) ▸ スイッチ (Switch)",
     "versions": [
       "3.x",
-      "4.x"
+      "4.x",
+      "5.x"
     ],
     "tip": "真偽値をGroup Inputに出すとモディファイア側でON/OFFできる。"
   },
@@ -582,9 +587,13 @@
   {
     "cat": "レンダリング",
     "title": "透明・ガラスのような質感にしたい",
-    "feature": "伝達 / IOR (Transmission / IOR)",
-    "location": "マテリアルプロパティ ▸ プリンシプルBSDF ▸ 伝達 (Transmission)",
-    "tip": "ガラスはIOR 1.45前後、水は1.33が目安。"
+    "feature": "伝達の重み / IOR (Transmission Weight / IOR)",
+    "location": "マテリアルプロパティ ▸ プリンシプルBSDF ▸ 伝達の重み (Transmission Weight)",
+    "versions": [
+      "4.x",
+      "5.x"
+    ],
+    "tip": "ガラスはIOR 1.45前後、水は1.33が目安。Blender 4.0でプリンシプルBSDFの項目名が「伝達(Transmission)」から「伝達の重み(Transmission Weight)」に変更された。"
   },
   {
     "cat": "レンダリング",
@@ -612,7 +621,11 @@
     "title": "ボーンを整理して見やすくしたい",
     "feature": "ボーンコレクション (Bone Collections)",
     "location": "アーマチュアプロパティ ▸ ボーンコレクション (Bone Collections)",
-    "tip": "指ボーンなど細かいものをまとめて表示/非表示にできる。"
+    "versions": [
+      "4.x",
+      "5.x"
+    ],
+    "tip": "Blender 4.0で旧「ボーングループ/アーマチュアレイヤー」から置き換わった機能。指ボーンなど細かいものをまとめて表示/非表示にできる。"
   },
   {
     "cat": "アニメーション・物理演算",
@@ -808,5 +821,298 @@
     "location": "3Dビューポート ▸ 表示 (View) ▸ ローカルビュー (Local View)",
     "shortcut": "/（テンキー）",
     "tip": "他のオブジェクトが一時的に隠れるだけで削除はされない。"
+  },
+  {
+    "cat": "モデリング",
+    "title": "移動・回転・拡縮をリセットして数値を確定させたい",
+    "feature": "全トランスフォームを適用 (Apply All Transforms)",
+    "location": "オブジェクトモード ▸ オブジェクト ▸ 適用 (Apply) ▸ 全トランスフォーム (All Transforms)",
+    "shortcut": "Ctrl+A",
+    "tip": "スケールが1でないとモディファイアやシミュレーションが正しく動かないことがある。"
+  },
+  {
+    "cat": "モデリング",
+    "title": "並べた物の位置や回転を少しずつバラつかせたい",
+    "feature": "ランダムトランスフォーム (Randomize Transform)",
+    "location": "オブジェクトモード ▸ オブジェクト ▸ トランスフォーム (Transform) ▸ ランダムトランスフォーム (Randomize Transform)",
+    "tip": "複数オブジェクトを選択してから実行すると自然なばらつきが出せる。"
+  },
+  {
+    "cat": "モデリング",
+    "title": "編集した片側の形をもう片方にも実メッシュとして反映したい",
+    "feature": "対称化 (Symmetrize)",
+    "location": "編集モード ▸ メッシュ ▸ 対称化 (Symmetrize)",
+    "tip": "ミラーモディファイアと違い実データが複製されるので彫刻編集後の統合に便利。"
+  },
+  {
+    "cat": "スカルプト",
+    "title": "スカルプトした表面のシワを布のように整えたい",
+    "feature": "クロスフィルター (Cloth Filter)",
+    "location": "スカルプトモード ▸ フィルター (Filter) ▸ クロスフィルター (Cloth Filter)",
+    "tip": "ドラッグする方向や強さでたるみ方の質感が変わる。"
+  },
+  {
+    "cat": "UV・マテリアル",
+    "title": "2つの色や画像を混ぜ合わせたい",
+    "feature": "ミックスカラー (Mix Color)",
+    "location": "シェーダーエディター ▸ 追加 ▸ カラー ▸ ミックスカラー (Mix Color)",
+    "versions": [
+      "3.x",
+      "4.x",
+      "5.x"
+    ],
+    "tip": "Blender 3.4以降の名称。乗算・比較(明)・オーバーレイなど「係数」の下でブレンドモードを選べる。"
+  },
+  {
+    "cat": "UV・マテリアル",
+    "title": "数値同士を計算してノードに渡したい",
+    "feature": "数式 (Math)",
+    "location": "シェーダーエディター ▸ 追加 ▸ コンバーター (Converter) ▸ 数式 (Math)",
+    "tip": "加算・乗算・剰余など演算の種類はノード上部のドロップダウンで切り替える。"
+  },
+  {
+    "cat": "UV・マテリアル",
+    "title": "座標やベクトルの計算をしたい",
+    "feature": "ベクトル演算 (Vector Math)",
+    "location": "シェーダーエディター ▸ 追加 ▸ ベクトル (Vector) ▸ ベクトル演算 (Vector Math)",
+    "tip": "内積・外積・正規化など演算モードをノード上部で切り替えられる。"
+  },
+  {
+    "cat": "UV・マテリアル",
+    "title": "白黒の情報を色のグラデーションに変換したい",
+    "feature": "カラーランプ (Color Ramp)",
+    "location": "シェーダーエディター ▸ 追加 ▸ コンバーター (Converter) ▸ カラーランプ (Color Ramp)",
+    "tip": "ストップを追加してファクター値の変化点を細かく調整できる。"
+  },
+  {
+    "cat": "UV・マテリアル",
+    "title": "テクスチャの位置・回転・大きさをずらしたい",
+    "feature": "テクスチャ座標 + マッピング (Texture Coordinate + Mapping)",
+    "location": "シェーダーエディター ▸ 追加 ▸ ベクトル (Vector) ▸ マッピング (Mapping)",
+    "tip": "入力にテクスチャ座標ノードのUVやオブジェクトを繋いでから調整する。"
+  },
+  {
+    "cat": "UV・マテリアル",
+    "title": "見る角度によって効果を変えたい（縁を光らせる等）",
+    "feature": "フレネル (Fresnel)",
+    "location": "シェーダーエディター ▸ 追加 ▸ 入力 (Input) ▸ フレネル (Fresnel)",
+    "tip": "Mixノードのファクターに繋ぐと縁だけ反射を強めるような表現ができる。"
+  },
+  {
+    "cat": "UV・マテリアル",
+    "title": "自ら光っているような質感にしたい",
+    "feature": "放射 (Emission)",
+    "location": "マテリアルプロパティ ▸ プリンシプルBSDF ▸ 放射色 / 放射の強さ (Emission Color / Strength)",
+    "tip": "強さを1以上にするとブルーム等の発光表現に使いやすくなる。"
+  },
+  {
+    "cat": "レンダリング",
+    "title": "Cyclesの画質とレンダー時間のバランスを取りたい",
+    "feature": "サンプル数 (Render Samples)",
+    "location": "レンダープロパティ ▸ サンプリング (Sampling) ▸ レンダー (Render) ▸ サンプル数 (Samples)",
+    "tip": "デノイズを併用すると少ないサンプル数でも綺麗に仕上がる。"
+  },
+  {
+    "cat": "レンダリング",
+    "title": "光の反射回数を抑えてレンダーを高速化したい",
+    "feature": "ライトパス - 最大バウンス数 (Light Paths - Max Bounces)",
+    "location": "レンダープロパティ ▸ ライトパス (Light Paths) ▸ 最大バウンス数 (Max Bounces)",
+    "tip": "拡散・光沢・伝過など反射の種類ごとにバウンス数を個別に制限できる。"
+  },
+  {
+    "cat": "レンダリング",
+    "title": "物同士が近い場所に自然な陰影を付けたい",
+    "feature": "アンビエントオクルージョン (Ambient Occlusion)",
+    "location": "レンダープロパティ ▸ アンビエントオクルージョン (Ambient Occlusion)",
+    "tip": "距離(Distance)を大きくするほど広い範囲に陰影がつく。"
+  },
+  {
+    "cat": "レンダリング",
+    "title": "EEVEEでも綺麗な反射・映り込みを出したい",
+    "feature": "レイトレーシング (Raytracing)",
+    "location": "レンダープロパティ ▸ レイトレーシング (Raytracing)",
+    "versions": [
+      "4.x",
+      "5.x"
+    ],
+    "tip": "EEVEE Next(Blender 4.2以降)で追加。オブジェクト・マテリアル側でも「レイトレーシングの反射」を有効にする必要がある。"
+  },
+  {
+    "cat": "レンダリング",
+    "title": "白飛びを抑えて自然な発色のレンダーにしたい",
+    "feature": "AgX カラーマネジメント (AgX View Transform)",
+    "location": "カラーマネジメントプロパティ ▸ 表示デバイス設定 (Color Management) ▸ ビュー変換 (View Transform) ▸ AgX",
+    "versions": [
+      "4.x",
+      "5.x"
+    ],
+    "tip": "Blender 4.0からFilmicに代わる新規ファイルのデフォルトになった。"
+  },
+  {
+    "cat": "レンダリング",
+    "title": "レンダー結果の明るさ・コントラストを調整したい",
+    "feature": "露出 / ガンマ (Exposure / Gamma)",
+    "location": "カラーマネジメントプロパティ ▸ 露出 (Exposure) / ガンマ (Gamma)",
+    "tip": "露出は光量そのもの、ガンマは中間調のコントラストに効く。"
+  },
+  {
+    "cat": "レンダリング",
+    "title": "動画やPNG連番として書き出す形式を変えたい",
+    "feature": "出力ファイル形式 (Output File Format)",
+    "location": "出力プロパティ ▸ 出力 (Output) ▸ ファイル形式 (File Format)",
+    "tip": "動画1本にまとめたい場合はFFmpeg動画、素材用途なら連番PNGが扱いやすい。"
+  },
+  {
+    "cat": "レンダリング",
+    "title": "明るい部分をふわっとにじませたい",
+    "feature": "グレア - ブルーム (Glare - Bloom)",
+    "location": "コンポジターエディター ▸ 追加 ▸ フィルター (Filter) ▸ グレア (Glare) ▸ タイプ:ブルーム (Bloom)",
+    "versions": [
+      "4.x",
+      "5.x"
+    ],
+    "tip": "Blender 4.2でEEVEEのブルーム設定が廃止され、コンポジターのグレアノードで再現する方式になった。"
+  },
+  {
+    "cat": "レンダリング",
+    "title": "陰影やAOなど要素ごとに分けて書き出したい",
+    "feature": "パス (Passes)",
+    "location": "ビューレイヤープロパティ ▸ パス (Passes) ▸ データ (Data) / ライト (Light)",
+    "tip": "コンポジターで個別に色調整してから最終合成する時に使う。"
+  },
+  {
+    "cat": "アニメーション・物理演算",
+    "title": "キャラクターの骨組みを作りたい",
+    "feature": "アーマチュア追加 (Add Armature)",
+    "location": "3Dビューポート ▸ 追加 (Add) ▸ アーマチュア (Armature)",
+    "shortcut": "Shift+A",
+    "tip": "編集モードでボーンを押し出し(E)しながら親子構造を作っていく。"
+  },
+  {
+    "cat": "アニメーション・物理演算",
+    "title": "メッシュをボーンで動くように自動で結びつけたい",
+    "feature": "自動のウェイトで (With Automatic Weights)",
+    "location": "メッシュとアーマチュアを選択 ▸ アーマチュアを最後に選択 ▸ Ctrl+P ▸ 自動のウェイトで (With Automatic Weights)",
+    "shortcut": "Ctrl+P",
+    "tip": "骨からの距離を基に自動計算されるが、細部は後でウェイトペイントの調整が必要。"
+  },
+  {
+    "cat": "アニメーション・物理演算",
+    "title": "ボーンの影響範囲を手描きで調整したい",
+    "feature": "ウェイトペイントモード (Weight Paint Mode)",
+    "location": "モード切替 ▸ ウェイトペイント (Weight Paint)",
+    "shortcut": "Ctrl+Tab",
+    "tip": "青は影響なし、赤は影響最大。Ctrlクリックでボーンを選ぶと対応する頂点グループに切り替わる。"
+  },
+  {
+    "cat": "アニメーション・物理演算",
+    "title": "左右対称にウェイトを塗りたい",
+    "feature": "X軸ミラー (Symmetry X)",
+    "location": "ウェイトペイントモード ▸ ツール設定 ▸ オプション (Options) ▸ 対称 (Symmetry) ▸ X",
+    "tip": "ボーン名が.L/.Rの命名規則に沿っていないと正しく反映されない。"
+  },
+  {
+    "cat": "アニメーション・物理演算",
+    "title": "ボーンが曲がりすぎたり動きすぎたりしないよう制限したい",
+    "feature": "回転を制限 (Limit Rotation)",
+    "location": "ポーズモード ▸ ボーンコンストレイントプロパティ ▸ 追加 (Add) ▸ 回転を制限 (Limit Rotation)",
+    "tip": "軸ごとに最小・最大角度を指定し、ひじや膝が逆に曲がらないようにできる。"
+  },
+  {
+    "cat": "ファイル管理",
+    "title": "他のPCに移すと画像が見つからなくなる",
+    "feature": "パスを相対に (Make Paths Relative)",
+    "location": "ファイル ▸ 外部データ (External Data) ▸ パスを相対に (Make Paths Relative)",
+    "tip": ".blendファイルと画像を同じフォルダ構成のまま移動すればリンク切れを防げる。"
+  },
+  {
+    "cat": "ジオメトリノード",
+    "title": "ノードの中で頂点の位置を直接動かしたい",
+    "feature": "位置を設定 (Set Position)",
+    "location": "ジオメトリノードエディター ▸ 追加 ▸ ジオメトリ (Geometry) ▸ 位置を設定 (Set Position)",
+    "versions": [
+      "3.x",
+      "4.x",
+      "5.x"
+    ],
+    "tip": "オフセットにノイズテクスチャなどを繋ぐと有機的な変形になる。"
+  },
+  {
+    "cat": "ジオメトリノード",
+    "title": "複数のジオメトリを1本のノードにまとめたい",
+    "feature": "ジオメトリを統合 (Join Geometry)",
+    "location": "ジオメトリノードエディター ▸ 追加 ▸ ジオメトリ (Geometry) ▸ ジオメトリを統合 (Join Geometry)",
+    "versions": [
+      "3.x",
+      "4.x",
+      "5.x"
+    ],
+    "tip": "入力ソケットを右クリック ▸「複製」で入力数を増やせる。"
+  },
+  {
+    "cat": "操作・UI",
+    "title": "オブジェクトをまとめて整理・表示管理したい",
+    "feature": "コレクション (Collection)",
+    "location": "アウトライナー ▸ 右クリック ▸ 新規コレクション (New Collection)",
+    "shortcut": "M（オブジェクトを移動）",
+    "tip": "コレクションごとにレンダリング対象や表示のON/OFFをまとめて切り替えられる。"
+  },
+  {
+    "cat": "操作・UI",
+    "title": "ポリゴン数やメモリ使用量を確認したい",
+    "feature": "統計 (Statistics)",
+    "location": "3Dビューポート ▸ オーバーレイ (Overlays) ▸ 統計 (Statistics)",
+    "tip": "重くなってきた時にどの数値が跳ね上がっているか確認する手がかりになる。"
+  },
+  {
+    "cat": "操作・UI",
+    "title": "カメラ視点でシーンを確認したい",
+    "feature": "カメラビュー (View Camera)",
+    "location": "3Dビューポート ▸ ビュー (View) ▸ 視点 (Viewpoint) ▸ カメラ (Camera)",
+    "shortcut": "テンキー 0",
+    "tip": "この視点のままN移動すると実際にカメラが動くので注意。"
+  },
+  {
+    "cat": "操作・UI",
+    "title": "追加機能(アドオン)を使えるようにしたい",
+    "feature": "アドオンを有効化 (Enable Add-on)",
+    "location": "編集 (Edit) ▸ プリファレンス (Preferences) ▸ アドオン (Add-ons) ▸ チェックボックスを有効化",
+    "tip": "有効化してもすぐ反映されない場合はBlenderの再起動を試す。"
+  },
+  {
+    "cat": "操作・UI",
+    "title": "ダウンロードしたアドオンファイルを追加したい",
+    "feature": "ディスクからインストール (Install from Disk)",
+    "location": "プリファレンス (Preferences) ▸ アドオン (Add-ons) ▸ 右上の▾ ▸ ディスクからインストール (Install from Disk)",
+    "tip": ".zipファイルのまま解凍せずに選択するのがポイント。"
+  },
+  {
+    "cat": "操作・UI",
+    "title": "2Dの線画・アニメーションを描きたい",
+    "feature": "グリースペンシル追加 (Add Grease Pencil)",
+    "location": "3Dビューポート ▸ 追加 (Add) ▸ グリースペンシル (Grease Pencil) ▸ ブランク (Blank)",
+    "shortcut": "Shift+A",
+    "tip": "「2D Animation」ワークスペースを使うと描画に適した画面配置になる。"
+  },
+  {
+    "cat": "操作・UI",
+    "title": "グリースペンシルで線を描きたい",
+    "feature": "描画モード (Draw Mode)",
+    "location": "モード切替 ▸ 描画モード (Draw Mode)",
+    "tip": "左側のツールバーで描画・塗りつぶし・消しゴムツールを切り替えられる。"
+  },
+  {
+    "cat": "操作・UI",
+    "title": "グリースペンシルの絵を要素ごとに分けて管理したい",
+    "feature": "レイヤー (Layers)",
+    "location": "オブジェクトデータプロパティ ▸ レイヤー (Layers)",
+    "tip": "背景・キャラ・線画などレイヤー分けしておくと後で編集しやすい。"
+  },
+  {
+    "cat": "操作・UI",
+    "title": "前後のフレームの絵を薄く表示して作画の参考にしたい",
+    "feature": "オニオンスキン (Onion Skinning)",
+    "location": "描画モード ▸ タイムライン付近 ▸ オニオンスキン表示切り替え",
+    "tip": "前のフレームは赤系、後のフレームは緑系の色で薄く重ねて表示される。"
   }
 ]
