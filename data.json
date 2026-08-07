@@ -1286,5 +1286,20 @@
       "4.x",
       "5.x"
     ]
+  },
+  {
+    "cat": "アドオン",
+    "title": "__TEST_DELETE__",
+    "feature": "テスト削除確認",
+    "location": "",
+    "shortcut": "",
+    "tip": "",
+    "versions": [
+      "2.8-2.9",
+      "3.x",
+      "4.x",
+      "5.x"
+    ],
+    "user_added": true
   }
 ]
