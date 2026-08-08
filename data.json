@@ -1501,21 +1501,5 @@
       "5.x"
     ],
     "tip": "キー配置やタイミング調整がしやすくなる。Blender 5.0で追加。"
-  },
-  {
-    "cat": "テスト新カテゴリ",
-    "title": "__TEST_NEWCAT__",
-    "feature": "テスト",
-    "location": "",
-    "shortcut": "",
-    "tip": "",
-    "versions": [
-      "2.8-2.9",
-      "3.x",
-      "4.x",
-      "5.x"
-    ],
-    "user_added": true,
-    "researched": false
   }
 ]
