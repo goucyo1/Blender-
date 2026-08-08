@@ -1501,5 +1501,21 @@
       "5.x"
     ],
     "tip": "キー配置やタイミング調整がしやすくなる。Blender 5.0で追加。"
+  },
+  {
+    "cat": "トポロジー",
+    "title": "トポロジーについて",
+    "feature": "使用方法等",
+    "location": "",
+    "shortcut": "",
+    "tip": "",
+    "versions": [
+      "2.8-2.9",
+      "3.x",
+      "4.x",
+      "5.x"
+    ],
+    "user_added": true,
+    "researched": false
   }
 ]
